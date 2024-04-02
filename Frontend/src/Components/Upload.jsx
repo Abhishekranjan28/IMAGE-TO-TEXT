@@ -6,7 +6,7 @@ function Upload() {
         const file = fileInput.files[0];
         const formData = new FormData();
         formData.append('file', file);
-        fetch('http://127.0.0.1:5000/upload', {
+        fetch('https://ImagetoText.onrender.com', {
             method: 'POST',
             body: formData
         })
@@ -29,7 +29,7 @@ function Upload() {
                     "Welcome to our innovative image-to-text conversion platform, where every pixel holds a story waiting to be told. With just a simple upload, unlock the power to transform your images into editable text effortlessly. Say goodbye to tedious manual transcription and hello to seamless digital conversion. Whether it's extracting text from documents, screenshots, or photos, our intuitive tool makes the process a breeze. Experience the magic of visual intelligence as your images come to life with readable text at your fingertips. Don't let valuable information remain hidden within your visuals – upload now and let the words leap off the screen!"
                 </div>
                 <div className='w-[1/2]'>
-                    <form id="uploadForm" encType="multipart/form-data" action="http://127.0.0.1:5000/upload">
+                    <form id="uploadForm" encType="multipart/form-data" action="https://ImagetoText.onrender.com">
                         <input type="file" id="fileInput" />
                         <button type="button" onClick={uploadImage} className='bg-zinc-500 p-[10px] rounded-lg font-bold hover:outline' >Upload</button>
                     </form>
